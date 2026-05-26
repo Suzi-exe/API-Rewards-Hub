@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Bait element used by the adblock detector. Real adblockers will hide this. */
+.ad-banner-bait,
+.adsbox,
+.ad-placement,
+.adsbygoogle {
+  display: block !important;
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+}
+
+html,
+body {
+  background-color: #0a0a0f;
+  color: #e5e7eb;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Subtle radial background used on hero/landing */
+.bg-grid {
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(99, 102, 241, 0.18), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(168, 85, 247, 0.15), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(56, 189, 248, 0.12), transparent 40%);
+}
+
+/* Custom scrollbar for history list */
+.scroll-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.4);
+  border-radius: 3px;
+}
+.scroll-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
